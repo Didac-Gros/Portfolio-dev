@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Junio 2022 - Junio 2023",
+    title: "Junior Software Developer",
+    company: "Fundació Nord",
+    description:
+      "Colaborando en proyectos utilizando Javascript y el framework de Vue JS y proyectos con Dart y el SDK de Flutter. Encargado de tareas como la gestión de estados, bases de datos, fetch de datos",
+    link: "https://www.fundacionord.cat/",
+  },
+  {
+    date: "Octubre 2020 - Junio 2021",
+    title: "Técnico informático",
+    company: "IES Santa Coloma de Farners",
+    description:
+      "Técnico informático en el IES Santa Coloma de Farners. Realización de tareas como mantenimiento de equipos, protección contra virus, administración de red, instalación de software y hardware, soporte a profesores y alumnos.",
+  },
+];
+---
+
+<ol class="relative mt-7">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
