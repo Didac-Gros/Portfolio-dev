@@ -9,6 +9,8 @@ import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/Briefcase.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import TitleSection from "../components/TitleSection.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 // Supports weights 100-900
 ---
 
@@ -16,11 +18,11 @@ import TitleSection from "../components/TitleSection.astro";
   title="Porfolio de Dídac - Desarrollador y Programador Software"
   description="Contrata a Dídac para crear tu aplicación web o móvil. Desarrollador de Software"
 >
-  <main class="px-6">
-    <SectionContainer class="py-20">
+  <main class="px-6 mt-16">
+    <SectionContainer class="py-24 lg:py-16">
       <img
-        class="rounded-full w-12 h-12 mb-4"
-        src="myfoto.jpg"
+        class="rounded-full size-16 lg:size-20 mb-4"
+        src="myfoto.webp"
         alt="Didac's photo"
       />
 
@@ -48,15 +50,15 @@ import TitleSection from "../components/TitleSection.astro";
 
       <nav class="flex flex-wrap gap-4 mt-6">
         <SocialPill href="mailto:didacgros85@gmail.com">
-          <MailIcon class="size-5 lg:size-6" />
+          <MailIcon class="size-5" />
           Contáctame
         </SocialPill>
         <SocialPill href="https://www.linkedin.com/in/didac-gros-7257991b1/">
-          <LinkedInIcon class="size-5 lg:size-6" />
+          <LinkedInIcon class="size-5" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/f1nga">
-          <GitHubIcon class="size-5 lg:size-6" />
+          <GitHubIcon class="size-5" />
           Github
         </SocialPill>
       </nav>
@@ -69,12 +71,12 @@ import TitleSection from "../components/TitleSection.astro";
       </TitleSection>
       <Experience />
 
-      <SectionContainer id="proyectos">
-        <TitleSection>
-          <BriefCase class="size-5 lg:size-6" />
+      <SectionContainer id="proyectos" class="mt-24">
+        <TitleSection className="mb-8">
+          <CodeIcon class="size-5 lg:size-7" />
           Proyectos
         </TitleSection>
-        <Experience />
+        <Projects />
       </SectionContainer>
     </SectionContainer>
   </main>
