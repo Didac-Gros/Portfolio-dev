@@ -11,6 +11,9 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 import TitleSection from "../components/TitleSection.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Inicio from "../components/Inicio.astro";
 // Supports weights 100-900
 ---
 
@@ -18,50 +21,9 @@ import Projects from "../components/Projects.astro";
   title="Porfolio de Dídac - Desarrollador y Programador Software"
   description="Contrata a Dídac para crear tu aplicación web o móvil. Desarrollador de Software"
 >
-  <main class="px-6 mt-16">
-    <SectionContainer class="py-24 lg:py-16">
-      <img
-        class="rounded-full size-16 lg:size-20 mb-4"
-        src="myfoto.webp"
-        alt="Didac's photo"
-      />
-
-      <h1
-        class="text-white text-2xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-10"
-      >
-        Hola, soy Dídac <a
-          href="https://www.linkedin.com/in/didac-gros-7257991b1/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-base lg:text-xl text-wrap">
-        <span
-          >Estudiante de ingenieria informática en la Universitat de Girona.</span
-        >
-        <span class="text-yellow-200 opacity-80"
-          >Desarrollador de Software en crecimiento.
-        </span>
-        <span>Siempre abierto a nuevos desafíos y colaboraciones.</span>
-      </h2>
-
-      <nav class="flex flex-wrap gap-4 mt-6">
-        <SocialPill href="mailto:didacgros85@gmail.com">
-          <MailIcon class="size-5" />
-          Contáctame
-        </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/didac-gros-7257991b1/">
-          <LinkedInIcon class="size-5" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/f1nga">
-          <GitHubIcon class="size-5" />
-          Github
-        </SocialPill>
-      </nav>
+  <main class="px-6">
+    <SectionContainer id="inicio">
+      <Inicio />
     </SectionContainer>
 
     <SectionContainer id="experiencia">
@@ -70,14 +32,22 @@ import Projects from "../components/Projects.astro";
         Experiencia laboral
       </TitleSection>
       <Experience />
+    </SectionContainer>
 
-      <SectionContainer id="proyectos" class="mt-24">
-        <TitleSection className="mb-8">
-          <CodeIcon class="size-5 lg:size-7" />
-          Proyectos
-        </TitleSection>
-        <Projects />
-      </SectionContainer>
+    <SectionContainer id="proyectos">
+      <TitleSection class="mb-8">
+        <CodeIcon class="size-5 lg:size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection class="mb-8">
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
