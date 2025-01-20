@@ -60,7 +60,7 @@ const PROJECTS = [
   {
     title: "ExitNow - Red social basada en comunidades",
     description:
-      "Aplicación móbil multiplataforma que trata de una red social para compartir y publicar fotografías al instante, sin filtros de por medio. Creado con el SDK de Flutter y Firebase.",
+      "Aplicación móbil multiplataforma de una red social para compartir y publicar fotografías al instante, sin filtros de por medio. Creado con el SDK de Flutter y Firebase.",
     github: "https://github.com/f1nga/exit_now",
     image: "/projects/exitnow.webp",
     tags: [TAGS.FLUTTER, TAGS.FIREBASE, TAGS.DART],
@@ -76,7 +76,7 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-12">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -91,8 +91,8 @@ const PROJECTS = [
           </div>
         </div>
 
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-xl font-bold text-gray-100">{title}</h3>
+        <div class="w-full md:w-1/2 md:max-w-lg content-center">
+          <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
           <div class="flex flex-wrap mt-2">
             <ul class="flex flex-row mb-2 gap-x-2">
               {tags.map((tag) => (

@@ -27,7 +27,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500"
+          class="relative block px-2 py-2 transition hover:text-yellow-300"
           aria-label={link.label}
           href={link.url}
         >
@@ -48,9 +48,9 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-blue-500");
+              item.classList.add("text-yellow-300");
             } else {
-              item.classList.remove("text-blue-500");
+              item.classList.remove("text-yellow-300");
             }
           });
         }
